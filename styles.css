@@ -1,0 +1,96 @@
+
+.carousel-control-next {
+    right: -142px;
+}
+
+.carousel-control-prev {
+    left: -142px;
+}
+
+.carousel-indicators {
+    bottom: -70px;
+}
+
+@media (max-width: 490px) {
+    .carousel-control-next {
+        right: -9vw;
+    }
+    
+    .carousel-control-prev {
+        left: -9vw;
+    }
+    
+    .carousel-indicators {
+        bottom: -48px;
+    }
+}
+
+@media (min-width:490px) and (max-width: 540px) {
+    .carousel-control-next {
+        right: -50px;
+    }
+    
+    .carousel-control-prev {
+        left: -50px;
+    }
+    
+    .carousel-indicators {
+        bottom: -48px;
+    }
+}
+
+@media (min-width:540px) and (max-width: 720px) {
+    .carousel-control-next {
+        right: -48px;
+    }
+    
+    .carousel-control-prev {
+        left: -48px;
+    }
+    
+    .carousel-indicators {
+        bottom: -48px;
+    }
+}
+
+@media (min-width:720px) and (max-width: 900px) {
+    .carousel-control-next {
+        right: -68px;
+    }
+    
+    .carousel-control-prev {
+        left: -68px;
+    }
+    
+    .carousel-indicators {
+        bottom: -48px;
+    }
+}
+
+@media (min-width:900px) and (max-width: 1000px) {
+    .carousel-control-next {
+        right: -68px;
+    }
+    
+    .carousel-control-prev {
+        left: -68px;
+    }
+    
+    .carousel-indicators {
+        bottom: -48px;
+    }
+}
+
+@media (min-width:1000px) and (max-width: 1100px) {
+    .carousel-control-next {
+        right: -110px;
+    }
+    
+    .carousel-control-prev {
+        left: -110px;
+    }
+    
+    .carousel-indicators {
+        bottom: -48px;
+    }
+}
