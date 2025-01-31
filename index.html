@@ -50,43 +50,85 @@
                      </div>
                   </div>
                </div>
-               <div id="container02" data-scroll-id="more" data-scroll-behavior="center" data-scroll-offset="0" data-scroll-speed="3" data-scroll-invisible="1" class="style2 container default">
-                  <div class="wrapper">
-                     <div class="inner">
-                        <h2 id="text06" class="style2" style="opacity: 1; transform: none;">Demo Reel</h2>
-                        <div id="video02" class="video">
-                           <div class="frame"><iframe src="https://www.youtube-nocookie.com/embed/PgltiBvUeuo?autoplay=1&amp;mute=1&amp;rel=0&amp;loop=1&amp;controls=1&amp;cc_load_policy=0&amp;playlist=PgltiBvUeuo" allowfullscreen="1"></iframe></div>
-                        </div>
-                        <h2 id="text03" class="style2" style="opacity: 1; transform: none;">Latest Personal Projects</h2>
-                        <div id="carouselIndicators" class="carousel slide">
-                           <div class="carousel-indicators">
-                             <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                             <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                           </div>
-                           <div class="carousel-inner">
-                             <div class="carousel-item active">
-                              <div id="video01" class="video">
-                                 <div class="frame"><iframe src="https://www.youtube-nocookie.com/embed/cLlB1cDQmsA?autoplay=1&mute=1&rel=0&loop=1&controls=1&cc_load_policy=0&playlist=cLlB1cDQmsA" allowfullscreen="1"></iframe></div>
-                              </div>
-                             </div>
-                             <div class="carousel-item">
-                              <div id="video02" class="video">
-                                 <div class="frame"><iframe src="https://www.youtube-nocookie.com/embed/bmNbV7_UeNQ?autoplay=1&mute=1&rel=0&loop=1&controls=1&cc_load_policy=0&playlist=bmNbV7_UeNQ" allowfullscreen="1"></iframe></div>
-                              </div>
-                             </div>
-                           </div>
-                           <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
-                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                             <span class="visually-hidden">Previous</span>
-                           </button>
-                           <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
-                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                             <span class="visually-hidden">Next</span>
-                           </button>
-                         </div>
-                     </div>
-                  </div>
-               </div>
+               <div id="container02" data-scroll-id="more" data-scroll-behavior="center" data-scroll-offset="0" data-scroll-speed="3" data-scroll-invisible="1" class="style2 container default"><div class="wrapper"><div class="inner"><h2 id="text06" class="style2" style="opacity: 1; transform: none;">Demo Reel</h2><p id="text09" class="style4">
+               
+               <video controls width="100%" height="auto" autoplay muted>
+  <source src="videos/1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+               
+               </p><h2 id="text03" class="style2" style="opacity: 1; transform: none;">Latest Personal Project</h2><p id="text10" class="style4">
+            
+            
+            
+            
+            
+            
+            
+               
+<div class="carousel-container" style="position: relative; max-width: 100%; overflow: hidden;">
+  <div id="carousel-wrapper" style="display: flex; transition: transform 0.5s ease;">
+    <!-- Video elements will be dynamically inserted here -->
+  </div>
+
+  <!-- Navigation Buttons -->
+  <button onclick="previousVideo()" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px;">❮</button>
+  <button onclick="nextVideo()" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px;">❯</button>
+</div>
+
+<script>
+  const carouselWrapper = document.getElementById("carousel-wrapper");
+  const videoFiles = ["videos/2.mp4", "videos/3.mp4"];
+  let currentIndex = 0;
+
+  // Dynamically create video elements for each video
+  videoFiles.forEach((videoSrc) => {
+    const videoElement = document.createElement("video");
+    videoElement.setAttribute("controls", true);
+    videoElement.setAttribute("autoplay", true);
+    videoElement.setAttribute("muted", true); // Ensure muted via attribute
+    videoElement.muted = true; // Programmatic mute for browsers
+    videoElement.style.width = "100%";
+
+    const sourceElement = document.createElement("source");
+    sourceElement.setAttribute("src", videoSrc);
+    sourceElement.setAttribute("type", "video/mp4");
+
+    videoElement.appendChild(sourceElement);
+    carouselWrapper.appendChild(videoElement);
+  });
+
+  function updateCarousel() {
+    carouselWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  function previousVideo() {
+    currentIndex = (currentIndex - 1 + videoFiles.length) % videoFiles.length;
+    updateCarousel();
+  }
+
+  function nextVideo() {
+    currentIndex = (currentIndex + 1) % videoFiles.length;
+    updateCarousel();
+  }
+</script>
+
+<style>
+  .carousel-container video {
+    min-width: 100%;
+  }
+</style>
+
+
+
+
+
+
+
+
+               
+               </p></div></div></div>
                <div id="container04" class="style2 container columns">
                   <div class="wrapper">
                      <div class="inner" data-reorder="1,0">
